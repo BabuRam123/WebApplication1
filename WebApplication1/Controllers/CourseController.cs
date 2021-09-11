@@ -23,7 +23,7 @@ namespace WebApplication1.Controllers
 
         public IActionResult Index()
         {
-            IEnumerable<Course> _course_list = _Courseservice.GetCourses();
+            IEnumerable<Course> _course_list = _Courseservice.GetCourses(_configuration.GetConnectionString("SQLConnection"));
             return View(_course_list);
         }
 
