@@ -37,17 +37,9 @@ namespace WebApplication1.Services
                     };
                     lst.Add(cour);
 
-                }
-                
-            }
             
             return lst;
 
-           
-
-
-            
-            
 
         }
     }
