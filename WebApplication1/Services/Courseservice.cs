@@ -26,14 +26,15 @@ namespace WebApplication1.Services
 
         }
 
-        public IEnumerable<Course> GetCourses()
+        public IEnumerable<Course> GetCourses(string con)
         {
            List<Course> lst = new List<Course>();
                     Course cour = new Course()
                     {
                         CourseID = 1,
                         CourseName = "Hi",
-                        Rating = 4
+                        Rating = 4,
+                        connec=con
                     };
                     lst.Add(cour);
 
