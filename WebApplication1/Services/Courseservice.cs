@@ -26,30 +26,21 @@ namespace WebApplication1.Services
 
         }
 
-        public IEnumerable<Course> GetCourses(string conn)
+        public IEnumerable<Course> GetCourses()
         {
-            DataSet ds = new DataSet();
-            List<Course> lst = new List<Course>();
-            string sql = "select * from Course";
-            SqlConnection connection = GetConnection(conn);
-            connection.Open();
-            SqlCommand sqlcmd = new SqlCommand(sql, connection);
-            using (SqlDataReader reader = sqlcmd.ExecuteReader())
-            {
-                while(reader.Read())
-                {
+           
                     Course cour = new Course()
                     {
-                        CourseID = reader.GetInt32(0),
-                        CourseName = reader.GetString(1),
-                        Rating = reader.GetDecimal(2)
+                        CourseID = 1,
+                        CourseName = "Hi",
+                        Rating = 4.3
                     };
                     lst.Add(cour);
 
                 }
                 
             }
-            connection.Close();
+            
             return lst;
 
            
