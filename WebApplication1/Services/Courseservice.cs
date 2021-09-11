@@ -33,7 +33,7 @@ namespace WebApplication1.Services
                     {
                         CourseID = 1,
                         CourseName = "Hi",
-                        Rating = 4.3
+                        Rating = 4
                     };
                     lst.Add(cour);
 
