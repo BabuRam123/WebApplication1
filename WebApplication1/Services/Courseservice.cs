@@ -28,7 +28,7 @@ namespace WebApplication1.Services
 
         public IEnumerable<Course> GetCourses()
         {
-           
+           List<Course> lst = new List<Course>();
                     Course cour = new Course()
                     {
                         CourseID = 1,
